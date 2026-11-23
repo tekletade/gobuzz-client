@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "label": "PRIVATE WELLNESS CLUB — ADDIS ABABA",
+    "title": "Move. Think. Recover.",
+    "subtitle": "A club built around heat, cold, and stillness — saunas, ice baths, and space to reset in the heart of the city.",
+    "comingSoon": "COMING SOON"
+  },
+  "method": {
+    "label": "THE GO'BUZZ METHOD",
+    "title": "A quieter, smarter rhythm.",
+    "subtitle": "Strength, clarity and restoration — designed for Addis Ababa's next generation of intentional living.",
+    "move": {
+      "title": "Move",
+      "description": "Functional fitness coached with intention. Strength, conditioning and movement built around your body and your life.",
+      "tags": ["Strength", "Conditioning", "Mobility"]
+    },
+    "think": {
+      "title": "Think",
+      "description": "Behavioural science meets personal development. One-on-one consultancy bridging psychology, habit formation and lifestyle design.",
+      "tags": ["Psychology", "Habits", "Clarity"]
+    },
+    "recover": {
+      "title": "Recover",
+      "description": "Sauna. Ice bath. Massage. The tools elite performers use to repair, reset, and come back stronger.",
+      "tags": ["Heat", "Cold", "Stillness"]
+    }
+  },
+  "founding": {
+    "label": "FOUNDING ACCESS",
+    "title": "Limited spaces only.",
+    "subtitle": "Go'Buzz opens with a limited founding list. Founding members set the culture of the club — and keep privileges the day the doors open.",
+    "benefits": [
+      "Priority booking across the recovery suite",
+      "Founding rate, locked for life",
+      "First access to opening-week programming"
+    ],
+    "registered": "Registered",
+    "founding": "Founding Members",
+    "remaining": "Spots Remaining"
+  },
+  "form": {
+    "title": "Reserve Your Spot",
+    "subtitle": "Be first to know. Founding spaces limited to 200.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phone": "Phone number",
+    "interest": "What interests you?",
+    "founding": "I want to be a Founding Member (200 spots only)",
+    "submit": "Reserve My Spot",
+    "submitting": "Submitting...",
+    "success": "Welcome",
+    "successMessage": "You're on the list. We'll be in touch soon.",
+    "waitlistPosition": "Waitlist position",
+    "foundingNumber": "FOUNDING MEMBER",
+    "duplicateEmail": "This email is already registered.",
+    "duplicatePhone": "This phone number is already registered.",
+    "of200": "of 200"
+
+  },
+  "footer": {
+    "tagline": "This is not a gym. This is not a clinic. This is Go'Buzz.",
+    "location": "Addis Ababa · Opening 2026"
+  }
+}

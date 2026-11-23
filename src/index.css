@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Mackinac';
+  src: url('/fonts/P22MackinacPro-Book_25.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mackinac';
+  src: url('/fonts/P22MackinacPro-BookItalic_15.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mackinac';
+  src: url('/fonts/P22MackinacPro-Medium_26.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mackinac';
+  src: url('/fonts/P22MackinacPro-Bold_16.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==================================================
+   GO'BUZZ DESIGN TOKENS
+   ================================================== */
+:root {
+  --bg: #f5f1e6;
+  --surface: #fbf8f0;
+  --raised: #fffdf7;
+  --ink: #1b1710;
+  --muted: #5d5546;
+  --faint: #94896f;
+  --gold: #86691c;
+  --gold-bright: #ab8a33;
+  --line: rgba(134, 105, 28, 0.28);
+  --line-soft: rgba(134, 105, 28, 0.14);
+  --glow: rgba(201, 168, 76, 0.16);
+  
+  --font-mackinac: 'Mackinac', Georgia, serif;
+  --font-manrope: 'Manrope', system-ui, sans-serif;
+  --serif-stack: var(--font-mackinac);
+  --sans-stack: var(--font-manrope);
+}
+
+.dark {
+  --bg: #0a0908;
+  --surface: #121008;
+  --raised: #1a1712;
+  --ink: #f8f1df;
+  --muted: #b3a98f;
+  --faint: #756c56;
+  --gold: #c9a84c;
+  --gold-bright: #e0c47a;
+  --line: rgba(201, 168, 76, 0.25);
+  --line-soft: rgba(201, 168, 76, 0.12);
+  --glow: rgba(201, 168, 76, 0.1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --font-serif: var(--serif-stack);
+  --font-sans: var(--sans-stack);
+}
+
+/* ==================================================
+   BASE STYLES
+   ================================================== */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans-stack);
+  transition: background-color 480ms ease, color 480ms ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* ==================================================
+   EDITORIAL PRIMITIVES
+   ================================================== */
+.eyebrow {
+  font-family: var(--sans-stack);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.display {
+  font-family: var(--serif-stack);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+}
+
+@keyframes text-slide-up {
+  from { transform: translateY(115%) rotate(4deg); opacity: 0; }
+  to { transform: translateY(0) rotate(0deg); opacity: 1; }
+}
+
+.slide-up {
+  animation: text-slide-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* ==================================================
+   FILM GRAIN
+   ================================================== */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.dark .grain::after { opacity: 0.07; }
+
+/* ==================================================
+   GLOBAL CUSTOM CURSOR
+   ================================================== */
+.has-cursor, .has-cursor * {
+  cursor: none !important;
+}
+
+/* ==================================================
+   TEASER SPECIFIC WRAPPER
+   (Optional: keep if you need page-specific overrides)
+   ================================================== */
+.teaser-wrapper {
+  background-color: transparent;
+}
